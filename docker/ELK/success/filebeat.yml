@@ -1,0 +1,37 @@
+filebeat.registry_file: /usr/share/filebeat/data/registry
+
+filebeat.inputs:
+- type: log
+  enabled: true 
+  paths:
+    - /host/var/lib/docker/containers/*/*.log
+
+filebeat.modules:
+- module: system
+  syslog:
+    enabled: true
+    var.paths: ["/host/var/log/syslog*"]
+    var.convert_timezone: true
+  auth:
+    enabled: true
+    var.paths: ["/host/var/log/auth.log*"]
+    var.convert_timezone: true
+
+setup.dashboards.enabled: true
+setup.dashboards.beat: ''
+setup.dashboards.kibana_index: '.kibana'
+setup.dashboards.always_kibana: true
+setup.dashboards.retry.enabled: true
+setup.template.enabled: true
+setup.template.overwrite: true
+
+output.elasticsearch:
+  enabled: true 
+  hosts: ["elastic-search:9200"]
+  username: elastic
+  password: **elastic-password**
+
+setup.kibana:
+  host: "kibana:5601"
+  username: elastic
+  password: **elastic-password**  

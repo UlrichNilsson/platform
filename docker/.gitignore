@@ -1,0 +1,7 @@
+.DS
+.DS_Store
+.vscode/
+.vs/
+bin/
+obj/
+Packages/

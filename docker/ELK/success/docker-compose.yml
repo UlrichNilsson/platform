@@ -1,0 +1,127 @@
+version: '3.3'
+
+configs:
+  elasticsearch.yml:
+    file: ./elasticsearch.yml
+  logstash.conf:
+    file: ./logstash.conf
+  kibana.yml:
+    file: ./kibana.yml  
+  filebeat.yml:
+    file: ./filebeat.yml    
+  metricbeat.yml:
+    file: ./metricbeat.yml
+
+networks:
+  elk-backend:
+    driver: overlay
+    attachable: true
+
+volumes:
+  elastic-data:
+  logstashpipeline:
+  filebeat-data:
+  metricbeat-data:
+   
+services:
+  
+  elastic-search:
+    image: elasticsearch:6.5.0
+    hostname: elastic-search
+    environment:
+      - cluster.name=ACME
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms4g -Xmx4g"
+      - ELASTIC_PASSWORD=**elastic-password**
+      - discovery.type=single-node
+    deploy:
+      resources:
+        limits:
+          memory: 6g
+        reservations:
+          memory: 6g
+    configs:
+      - source: elasticsearch.yml
+        target: /usr/share/elasticsearch/config/elasticsearch.yml      
+    networks:
+      - elk-backend
+    ports:
+      - 9200:9200      
+    volumes:
+      - elastic-data:/usr/share/elasticsearch/data  
+
+  logstash:
+    image: logstash:6.5.0
+    hostname: logstash
+    environment:
+      - 'path.config=/usr/share/logstash/conf/logstash.conf'
+      - 'xpack.monitoring.elasticsearch.url=http://elastic-search:9200'
+      - 'xpack.monitoring.enabled=true'
+      - 'xpack.monitoring.elasticsearch.username=elastic'
+      - 'xpack.monitoring.elasticsearch.password=**elastic-password**'      
+    configs:
+      - source: logstash.conf
+        target: /usr/share/logstash/conf/logstash.conf 
+    networks:
+      - elk-backend       
+    ports:
+      - "5003:5000"    # Logstash will listen on port 5000 for log data from the Docker Syslog logging driver
+    volumes:
+      - logstashpipeline:/usr/share/logstash/pipeline/
+  
+  kibana:
+    image: kibana:6.5.0
+    hostname: kibana
+    environment:
+      - SERVER_NAME=kibana
+      - ELASTICSEARCH_URL=http://elastic-search:9200
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=**elastic-password** 
+    configs:
+      - source: kibana.yml
+        target: /usr/share/kibana/config/kibana.yml 
+    networks:
+      - elk-backend   
+    ports:
+      - "5601:5601"
+
+  filebeat:
+    image: store/elastic/filebeat:6.5.0
+    user: root
+    deploy:
+      mode: global
+      placement:
+        constraints: [node.platform.os == linux] 
+    environment:
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=**elastic-password**     
+    configs:
+      - source: filebeat.yml
+        target: /usr/share/filebeat/filebeat.yml  
+    networks:
+      - elk-backend     
+    volumes:
+      - filebeat-data:/usr/share/filebeat/data/
+      - /var/log/:/host/var/log/:ro
+      - /var/lib/docker/containers:/host/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  metricbeat:
+    image: store/elastic/metricbeat:6.5.0
+    user: root
+    deploy:
+      mode: global
+      placement:
+        constraints: [node.platform.os == linux] 
+    configs:
+      - source: metricbeat.yml
+        target: /usr/share/metricbeat/metricbeat.yml  
+    command: metricbeat -e -system.hostfs=/hostfs    
+    networks:
+      - elk-backend     
+    volumes:
+      - metricbeat-data:/usr/share/metricbeat/data/
+      - /proc:/hostfs/proc:ro
+      - /sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /:/hostfs:ro

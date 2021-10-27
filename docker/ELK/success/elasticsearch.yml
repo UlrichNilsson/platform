@@ -1,0 +1,22 @@
+cluster.name: "ACME"
+network.host: 0.0.0.0
+
+# Set the minimum number of master eligible nodes that need to join a newly elected master 
+# in order for an election to complete and for the elected node to accept its mastership.
+discovery.zen.minimum_master_nodes: 1
+
+# Enable X-Pack Security
+xpack.security.enabled: true
+
+# Enable auditing to keep track of security-related events such as authentication failures and refused connections.
+# Logging these events enables you to monitor your cluster for suspicious activity and provides evidence in the event of an attack.
+xpack.security.audit.enabled: true
+
+# Enable X-Pack monitoring for Elasticsearch 
+xpack.monitoring.enabled: true
+
+# Collect monitoring data from the Elastic Stack Nodes
+xpack.monitoring.collection.enabled: true
+
+# Lock the address space into RAM
+bootstrap.memory_lock: true

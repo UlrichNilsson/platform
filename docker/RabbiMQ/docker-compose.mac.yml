@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  web:
+    image: rabbitmq:3-management
+    deploy:
+      mode: replicated
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+      #placement:
+      #  constraints:
+      #    - node.labels.os == centos
+    ports:
+      - "15672:15672"
+    networks:
+      - webnet
+networks:
+  webnet:

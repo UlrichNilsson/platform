@@ -1,0 +1,21 @@
+server.name: kibana
+server.host: 0.0.0.0
+
+# Enable the Kibana console
+console.enabled: true
+
+# Enable X-Pack Security
+xpack.security.enabled: true
+
+# Show the Monitoring UI in Kibana
+xpack.monitoring.ui.enabled: true
+
+# Enable X-Pack monitoring in Kibana
+xpack.monitoring.enabled: true
+
+# Enable data collection from the Kibana NodeJS server for Kibana Dashboards to be featured in the Monitoring. 
+xpack.monitoring.kibana.collection.enabled: true
+
+# For Elasticsearch clusters that are running in containers, this setting changes the Node Listing to display the CPU utilization based on the reported Cgroup statistics.
+# It also adds the calculated Cgroup CPU utilization to the Node Overview page instead of the overall operating system’s CPU utilization.
+xpack.monitoring.ui.container.elasticsearch.enabled: true

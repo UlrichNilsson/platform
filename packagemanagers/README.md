@@ -20,4 +20,4 @@ Or
 
 ## References
 
-<https://docs.microsoft.com/sv-se/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1>  
+<https://docs.microsoft.com/sv-se/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1>

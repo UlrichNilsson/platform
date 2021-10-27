@@ -1,0 +1,29 @@
+# Build hello world
+
+trigger:
+  branches:
+    include:
+    - master
+    - dev
+    - feature/*
+  paths:
+    include:
+    - HelloWorld/*
+    - Pipelines/HelloWorld.yml
+    exclude:
+    - HelloWorld/README.md
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- task: CmdLine@2
+  inputs:
+    script: |
+      ls
+      echo "Hello world"
+- script: javac HelloWorld/HelloWorld.java --configuration $(buildConfiguration)
+  displayName: 'Javac build HelloWorld $(buildConfiguration)'

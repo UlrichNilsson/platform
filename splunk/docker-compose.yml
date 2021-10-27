@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  splunk:
+    image: splunk/splunk
+    ports:
+      - 8000:8000
+    env_file: 
+      - ./env/local.env        
+    volumes:
+      - splunk-data:/opt/splunk/var       
+    networks: 
+      - default 
+       
+volumes:
+  splunk-data:
+ 
+networks:
+  default:
+    #external: true
+    name: ulni-local    
+    driver: overlay
+    attachable: true

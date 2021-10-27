@@ -29,13 +29,13 @@ jobs:
         run: dotnet --version
       
       - name: Dotnet restore
-        run: dotnet restore APITest/APITest.sln
+        run: dotnet restore dotnet/APITest/APITest.sln
       
       - name: Dotnet build
-        run: dotnet build APITest/APITest.sln --no-restore
+        run: dotnet build dotnet/APITest/APITest.sln --no-restore
 
       - name: Dotnet test
-        run: dotnet test APITest/APITest.sln --no-restore
+        run: dotnet test dotnet/APITest/APITest.sln --no-restore
 
       - name: List docker version
         run: docker --version

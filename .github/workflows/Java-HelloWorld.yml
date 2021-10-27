@@ -34,14 +34,11 @@ jobs:
       - name: Check java version on runner
         run: javac --version
       
-      - name: Dotnet restore
+      - name: Javac
         run: javac Java/HelloWorld/HelloWorld.java
-      
-     # - name: Dotnet build
-     #   run: dotnet build dotnet/HelloWorld/HelloWorld.sln --no-restore
 
-     # - name: Dotnet test
-     #   run: dotnet test dotnet/HelloWorld/HelloWorld.sln --no-restore
+      - name: List files
+        run: ls -la
 
       - name: List docker version
         run: docker --version

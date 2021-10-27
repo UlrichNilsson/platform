@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 15.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithCode", "FunWithCode.csproj", "{CB8F082A-FCBD-44F9-8A99-89FDC2FEB26E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB8F082A-FCBD-44F9-8A99-89FDC2FEB26E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB8F082A-FCBD-44F9-8A99-89FDC2FEB26E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB8F082A-FCBD-44F9-8A99-89FDC2FEB26E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB8F082A-FCBD-44F9-8A99-89FDC2FEB26E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

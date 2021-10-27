@@ -1,0 +1,29 @@
+# Build hello world
+
+trigger:
+  branches:
+    include:
+    - master
+    - dev
+    - feature/*
+  paths:
+    include:
+    - APITest/*
+    - Pipelines/APITest.yml
+    exclude:
+    - APITest/README.md
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- task: CmdLine@2
+  inputs:
+    script: |
+      ls
+      echo "Hello world"
+- script: dotnet build APITest/*.sln --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'

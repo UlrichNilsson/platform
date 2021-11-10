@@ -5,6 +5,10 @@ choco install postman -y
 choco install putty -y
 choco install putty.portable -y
 
+#Visual studio
+choco install visualstudio2019professional -y
+choco install vscode -y
+
 #Java
 #choco install javaruntime -y
 #choco install jdk8 -y

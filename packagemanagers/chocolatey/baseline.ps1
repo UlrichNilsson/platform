@@ -1,13 +1,34 @@
+# Linux apps
 choco install vim -y
+choco install wget -y
+choco install curl -y
 
-#javaruntime 8.0.231
-#jdk8 8.0.211
-#jre8 8.0.301
-#lens 5.2.0
-#mingw 11.2.0
-#ojdkbuild 15.0.2.7
-#openjdk 16.0.2
-#openjdk11jre 11.0.12.7
-#postman 8.12.2
-#putty 0.76
-#putty.portable 0.76
+choco install lens -y
+choco install mingw -y
+choco install postman -y
+choco install putty -y
+#choco install putty.portable -y
+choco install putty.install -y
+#choco install notepadplusplus.install -y
+#choco install 7zip.install -y
+#choco install git.install -y
+
+choco install sql-server-management-studio -y
+
+# Visual studio
+choco install visualstudio2019professional -y
+choco install vscode -y
+
+# Python
+
+choco install python3 -y
+
+#Java
+#choco install javaruntime -y
+#choco install jdk8 -y
+#choco install jre8 -y
+#choco install ojdkbuild -y
+#choco install openjdk -y
+#choco install openjdk11jre -y
+
+

@@ -1,4 +1,4 @@
-namespace src;
+namespace UtilityGUI;
 
 public class WeatherForecast
 {

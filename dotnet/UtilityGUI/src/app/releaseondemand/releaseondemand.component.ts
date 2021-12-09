@@ -5,7 +5,7 @@ import { APPLICATIONS } from '../mock-applications';
 @Component({
   selector: 'app-releaseondemand',
   templateUrl: './releaseondemand.component.html',
-  styleUrls: ['./releaseondemand.component.scss']
+  styleUrls: ['./releaseondemand.component.css']
 })
 export class ReleaseondemandComponent implements OnInit {
 

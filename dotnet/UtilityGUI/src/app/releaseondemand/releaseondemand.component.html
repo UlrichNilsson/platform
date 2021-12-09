@@ -1,11 +1,19 @@
-<h2>{{application.name | uppercase}} Details</h2>
-<div><span>id: </span>{{application.id}}</div>
-<div>
-  <label for="name">Application name: </label>
-  <input id="name" [(ngModel)]="application.name" placeholder="name"><BR>
-  <label for="name">Current version: </label>
-  <input id="name" [(ngModel)]="application.currentVersion" placeholder="currentVersion"><BR>
-  <label for="name">Target version: </label>
-  <input id="name" [(ngModel)]="application.targetVersion" placeholder="targetVersion">
-</div>
+<h2>My Applications</h2>
+<ul class="applications">
+  <li *ngFor="let application of applications"
+    [class.selected]="application === selectedApplication"
+    (click)="onSelect(application)">
+    <span class="badge">{{application.id}}</span> {{application.name}}
+  </li>
+</ul>
 
+<div *ngIf="selectedApplication">
+
+  <h2>{{selectedApplication.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedApplication.id}}</div>
+  <div>
+    <label for="application-name">Application name: </label>
+    <input id="application-name" [(ngModel)]="selectedApplication.name" placeholder="name">
+  </div>
+
+</div>

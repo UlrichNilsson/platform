@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Application } from '../application';
+import { APPLICATIONS } from '../mock-applications';
 
 @Component({
   selector: 'app-releaseondemand',
@@ -8,16 +9,16 @@ import { Application } from '../application';
 })
 export class ReleaseondemandComponent implements OnInit {
 
-  application: Application = {
-    id: 1,
-    name: 'UtilityAPI',
-    currentVersion: '1.1.1',
-    targetVersion: '1.1.2'
-  };
-  
+  applications=APPLICATIONS;
+  selectedApplication?: Application;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSelect(application: Application): void {
+    this.selectedApplication = application;
   }
 
 }

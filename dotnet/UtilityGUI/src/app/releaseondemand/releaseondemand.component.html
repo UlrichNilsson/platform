@@ -1,0 +1,14 @@
+<p>releaseondemand works!</p>
+
+<h2>{{application.id}} Details</h2>
+<h2>{{application.name}}</h2>
+<h2>{{application.currentVersion}}</h2>
+<h2>{{application.targetVersion}}</h2>
+
+
+<div><span>id: </span>{{application.id}}</div>
+<div>
+  <label for="name">Application name: </label>
+  <input id="name" [(ngModel)]="application.name" placeholder="name">
+</div>
+

@@ -256,3 +256,7 @@ paket-files/
 # Run dotnet in wsl Ubuntu
 
 *.deb
+
+# Angular
+
+.angular

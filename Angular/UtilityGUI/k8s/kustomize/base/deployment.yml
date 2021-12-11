@@ -1,0 +1,18 @@
+aliVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Ultilitygui
+  labels:
+    app: utilitygui
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavalable: 1
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: utilitygui
+  template:
+    metadata:

@@ -1,0 +1,22 @@
+<h2>GPP Applications [Release on demand information]</h2>
+<ul class="applications">
+  <li *ngFor="let application of applications"
+    [class.selected]="application === selectedApplication"
+    (click)="onSelect(application)">
+    <span class="badge">{{application.id}}</span> {{application.name}} | {{application.currentVersion}} | {{application.currentVersion}}
+  </li>
+</ul>
+
+<div *ngIf="selectedApplication">
+
+  <h2>{{selectedApplication.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedApplication.id}}</div>
+  <div>
+    <label for="application-name">Application name: </label>
+    <input id="application-name" [(ngModel)]="selectedApplication.name" placeholder="name">
+    <input id="application-name" [(ngModel)]="selectedApplication.currentVersion" placeholder="currentVersion">
+    <input id="application-name" [(ngModel)]="selectedApplication.targetVersion" placeholder="targetVersion">
+    
+  </div>
+
+</div>

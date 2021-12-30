@@ -1,6 +1,7 @@
 #Adding vim exclusions
 
-*~
 Angular/course/.DS_Store
 Angular/.DS_Store
-
+.DS_Store
+.DS_Store?
+*~

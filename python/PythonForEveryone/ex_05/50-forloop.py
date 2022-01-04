@@ -1,9 +1,9 @@
-numbers=[1,5,12,43,4,23]
+numbers = [1, 5, 12, 43, 4, 23]
 
-highestvalue=0
+highest_value = 0
 
 for number in numbers:
-    if(number>highestvalue):
-        highestvalue=number
+    if number>highest_value:
+        highest_value = number
 
-print("Higest number is", highestvalue)
+print("Highest number is", highest_value)

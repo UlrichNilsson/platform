@@ -1,7 +1,5 @@
-
-
-
-def Hello():
+def hello():
     return 'Hello World!!!'
 
-print(Hello())
+
+print(hello())

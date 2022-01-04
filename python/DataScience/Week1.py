@@ -17,6 +17,7 @@
 def add_numbers(x, y):
     return x + y
 
+
 add_numbers(1, 2)
 
 
@@ -234,7 +235,7 @@ print(lastname)
 
 # In[25]:
 
-'Chris' + 2
+# print('Chris' + 2)
 
 
 # In[26]:
@@ -309,8 +310,8 @@ lname
 
 # In[35]:
 
-x = ('Christopher', 'Brooks', 'brooksch@umich.edu', 'Ann Arbor')
-fname, lname, email = x
+# x = ('Christopher', 'Brooks', 'brooksch@umich.edu', 'Ann Arbor')
+# fname, lname, email = x
 
 
 # <br>
@@ -318,7 +319,7 @@ fname, lname, email = x
 
 # In[36]:
 
-print('Chris' + 2)
+# print('Chris' + 2)
 
 
 # In[37]:
@@ -367,7 +368,7 @@ print(sales_statement.format(sales_record['person'],
 
 import csv
 
-get_ipython().magic('precision 2')
+#get_ipython().magic('precision 2')
 
 with open('mpg.csv') as csvfile:
     mpg = list(csv.DictReader(csvfile))

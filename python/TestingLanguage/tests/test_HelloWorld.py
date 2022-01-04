@@ -1,6 +1,10 @@
 from unittest import TestCase
 
+from python.TestingLanguage.HelloWorld import hello
+
 
 class Test(TestCase):
     def test_hello(self):
-        self.fail()
+        actual = hello()
+        expected = "Hello World!!!"
+        self.assertEqual(actual, expected)

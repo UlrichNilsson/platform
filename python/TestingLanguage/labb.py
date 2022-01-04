@@ -4,7 +4,7 @@ number1 = input("Enter a number? ")
 number2 = input("Enter a number? ")
 number3 = input("Enter a number? ")
 
-list = [number1,number2,number3]
-list.sort()
+numberlist = [number1, number2, number3]
+numberlist.sort()
 
-print list[0],",",list[1],",",list[2]
+print(numberlist[0], ",", numberlist[1], ",", numberlist[2])

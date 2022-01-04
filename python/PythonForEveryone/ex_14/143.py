@@ -1,8 +1,9 @@
 class PartyAnimal:
-    def Hello(self):
+    def hello(self):
         print('Hello!!!!')
-        
+
+
 pa = PartyAnimal()
-pa.Hello()
+pa.hello()
 
 print(dir(pa))

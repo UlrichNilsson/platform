@@ -38,6 +38,11 @@ run-all works better then parallelshell
     "watch:all": "npm-run-all -p watch:scss lite"
 ```
 
+* `npm install --save-dev rimraf@2.6.2`
+* `npm -g install copyfiles@2.0.0`
+* `npm -g install imagemin-cli@3.0.0`
+* `npm install --save-dev usemin-cli@0.5.1 cssmin@0.4.3 uglifyjs@2.4.11 htmlmin@0.0.7`
+
 ## Bonus
 
 * `npm audit`

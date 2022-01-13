@@ -18,6 +18,30 @@
 * `lessc styles.less style.css`
 * `npm install --save-dev node-sass@7.0`
 * `npm run scss`
+* `npm install -save-dev onchange@3.3.0 parallelshell@3.0.2`
+
+Mac/windows
+
+```json
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss"`
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss"`
+```
+
+```json
+    "watch:all" : "parallelshell 'npm run watch:scss' 'npm run lite'"
+    "watch:all" : "parallelshell \"npm run watch:scss\" \"npm run lite\""
+```
+
+run-all works better then parallelshell
+
+```json
+    "watch:all": "npm-run-all -p watch:scss lite"
+```
+
+## Bonus
+
+* `npm audit`
+* `npm install --save-dev npm-run-all`
 
 ## Hide content
 

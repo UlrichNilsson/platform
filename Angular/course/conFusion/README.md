@@ -45,13 +45,34 @@ run-all works better then parallelshell
 
 ## Grunt
 
-* `npm install -g grunt-cli@1.2.0`
-* `npm install grunt@1.0.2 --save-dev`
-* `npm install grunt-sass@3.1.0 --save-dev`
-* `npm install time-grunt@1.4.0 --save-dev`
-* `npm install jit-grunt@0.10.0 --save-dev`
-* `npm install grunt-contrib-watch@1.0.0 --save-dev`
-* `npm install grunt-browser-sync@2.2.0 --save-dev`
+```bash
+npm install -g grunt-cli@1.2.0
+npm install grunt@1.0.2 --save-dev
+npm install grunt-sass@3.1.0 --save-dev
+npm install time-grunt@1.4.0 --save-dev
+npm install jit-grunt@0.10.0 --save-dev
+npm install grunt-contrib-watch@1.0.0 --save-dev
+npm install grunt-browser-sync@2.2.0 --save-dev
+npm install grunt-contrib-copy@1.0.0 --save-dev
+npm install grunt-contrib-clean@1.1.0 --save-dev
+npm install grunt-contrib-imagemin@2.0.1 --save-dev
+npm install grunt-contrib-concat@1.0.1 --save-dev
+npm install grunt-contrib-cssmin@2.2.1 --save-dev
+npm install grunt-contrib-htmlmin@2.4.0 --save-dev
+npm install grunt-contrib-uglify@3.3.0 --save-dev
+npm install grunt-filerev@2.3.1 --save-dev
+npm install grunt-usemin@3.1.1 --save-dev
+
+ ```
+
+## Gulp
+
+ ```bash
+     npm install -g gulp-cli@2.0.1
+     npm install gulp@3.9.1 --save-dev
+     npm install gulp-sass@5 --save-dev
+     npm browser-sync@2.23.6 --save-dev
+ ```
 
 ## Bonus
 

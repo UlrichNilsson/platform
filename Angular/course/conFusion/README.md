@@ -43,6 +43,16 @@ run-all works better then parallelshell
 * `npm -g install imagemin-cli@3.0.0`
 * `npm install --save-dev usemin-cli@0.5.1 cssmin@0.4.3 uglifyjs@2.4.11 htmlmin@0.0.7`
 
+## Grunt
+
+* `npm install -g grunt-cli@1.2.0`
+* `npm install grunt@1.0.2 --save-dev`
+* `npm install grunt-sass@3.1.0 --save-dev`
+* `npm install time-grunt@1.4.0 --save-dev`
+* `npm install jit-grunt@0.10.0 --save-dev`
+* `npm install grunt-contrib-watch@1.0.0 --save-dev`
+* `npm install grunt-browser-sync@2.2.0 --save-dev`
+
 ## Bonus
 
 * `npm audit`

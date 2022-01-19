@@ -4,6 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 `ng new conFusion2 --style=scss`
 
+* `npm install @angular/material@7 --save`
+* `npm install @angular/cdk@7 --save`
+* `npm install --save @angular/animations@13.0.3`
+* `npm install --save hammerjs@2.0.8`
+* `npm i @angular/cdk@"^13.0.0" --save`
+* `npm i @angular/flex-layout --save`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

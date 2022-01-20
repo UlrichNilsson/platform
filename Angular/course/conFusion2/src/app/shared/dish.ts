@@ -7,4 +7,14 @@ export class Dish {
     label: string;
     price: string;
     description: string;
+    constructor() {
+        this.id="";
+        this.name = "";
+        this.image = "";
+        this.category = "";
+        this.featured = false;
+        this.label = "";
+        this.price = "";
+        this.description = "";
+      }
 }

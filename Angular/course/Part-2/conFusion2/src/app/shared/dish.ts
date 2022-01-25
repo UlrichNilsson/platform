@@ -1,3 +1,5 @@
+import { Comment } from './comment';
+
 export class Dish {
     id: string;
     name: string;
@@ -7,6 +9,7 @@ export class Dish {
     label: string;
     price: string;
     description: string;
+    comments: Comment[];
     constructor() {
         this.id="";
         this.name = "";
@@ -16,5 +19,6 @@ export class Dish {
         this.label = "";
         this.price = "";
         this.description = "";
+        this.comments= [new Comment()];
       }
 }

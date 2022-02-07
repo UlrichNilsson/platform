@@ -24,7 +24,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * `npm install --save @angular/common@latest`
 * `npm install --save @angular/animations@latest`
 * `npm install --save @angular/platform-browser@latest`
-* `npm install --save @angular/platform-browser-dynamic@latest`
+* Direct error -> `npm install --save @angular/platform-browser-dynamic@latest`
 * `npm install --save @angular/router@latest`
 * `npm install --save @angular/flex-layout@latest`
 * `npm install --save @angular/forms@latest`

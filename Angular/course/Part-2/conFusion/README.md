@@ -11,6 +11,24 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * `npm i @angular/cdk@"^13.0.0" --save`
 * `npm i @angular/flex-layout --save`
 
+
+* `npm install --save @angular/cdk@latest`
+* `npm install --save @angular/compiler@latest`
+* `npm install --save @angular/core@latest`
+* `npm install --save font-awesome@latest`
+* `npm install --save hammerjs@latest`
+* `npm install --save rxjs@latest`
+* `npm install --save tslib@latest`
+* `npm install --save zone.js@latest`
+* `npm install --save @angular/common@latest`
+* `npm install --save @angular/animations@latest`
+* `npm install --save @angular/platform-browser@latest`
+* `npm install --save @angular/platform-browser-dynamic@latest`
+* `npm install --save @angular/router@latest`
+* `npm install --save @angular/flex-layout@latest`
+* `npm install --save @angular/forms@latest`
+* `npm install --save @angular/material@latest`
+
 ## Clean up to build
 
 * rm -rf node_modules

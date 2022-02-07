@@ -11,9 +11,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * `npm i @angular/cdk@"^13.0.0" --save`
 * `npm i @angular/flex-layout --save`
 
+## Second try
 
 * `npm install --save @angular/cdk@latest`
-* `npm install --save @angular/compiler@latest`
+* Skip -> `npm install --save @angular/compiler@latest`
 * `npm install --save @angular/core@latest`
 * `npm install --save font-awesome@latest`
 * `npm install --save hammerjs@latest`
@@ -28,6 +29,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * `npm install --save @angular/flex-layout@latest`
 * `npm install --save @angular/forms@latest`
 * `npm install --save @angular/material@latest`
+
+ng update
 
 ## Clean up to build
 

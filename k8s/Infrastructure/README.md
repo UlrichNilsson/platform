@@ -89,3 +89,7 @@ Update
 
 Upgrade
 `sudo apt-get upgrade -y`
+
+Delete cluster
+
+`sudo kubeadm reset`

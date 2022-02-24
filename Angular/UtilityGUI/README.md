@@ -34,6 +34,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Manual deploy K8s
 
-* `kubectl expose deployment utilitygui --type=LoadBalancer --name=my-service -n kube-verify`
 * `kubectl apply -f ./k8s/kustomize/base/deployment.yml`
 * `kubectl apply -f ./k8s/kustomize/base/nodeport.yml`
+
+<http://192.168.1.163:30009/>
+
+### Investigate
+
+* `kubectl expose deployment utilitygui --type=LoadBalancer --name=my-service -n kube-verify`

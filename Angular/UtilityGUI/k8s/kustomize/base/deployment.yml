@@ -1,18 +1,23 @@
-aliVersion: apps/v1
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: Ultilitygui
+  name: utilitygui
+  namespace: kube-verify
   labels:
     app: utilitygui
 spec:
-  replicas: 1
-  strategy:
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavalable: 1
-    type: RollingUpdate
   selector:
     matchLabels:
       app: utilitygui
+  replicas: 3 # tells deployment to run 2 pods matching the template
   template:
     metadata:
+      labels:
+        app: utilitygui
+    spec:
+      containers:
+      - name: utilitygui
+        image: ulrichnilsson/utilitygui:latest
+        ports:
+        - containerPort: 80
+      #imagePullPolicy: Always

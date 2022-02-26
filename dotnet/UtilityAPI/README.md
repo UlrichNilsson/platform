@@ -20,8 +20,8 @@
 
 ### Deploy to k3s
 
-`sudo kubectl apply -f ./deployment.yaml`  
-`sudo kubectl apply -f ./nodeport.yaml`
+* `kubectl apply -f ./k8s/kustomize/base/deployment.yml`
+* `kubectl apply -f ./k8s/kustomize/base/nodeport.yml`
 
 ## Validate
 

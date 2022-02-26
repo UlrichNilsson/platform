@@ -69,3 +69,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Docker
 
 `docker build -t ulrichnilsson/confusion .`
+`docker run -d -p 80:80 ulrichnilsson/confusion:latest`
+
+## Manual deploy K8s
+
+* `kubectl apply -f ./k8s/kustomize/base/deployment.yml`
+* `kubectl apply -f ./k8s/kustomize/base/nodeport.yml`

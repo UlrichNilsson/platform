@@ -22,3 +22,7 @@
 
 `sudo kubectl apply -f ./deployment.yaml`  
 `sudo kubectl apply -f ./nodeport.yaml`
+
+## Validate
+
+<http://192.168.1.163:30008/WeatherForecast>

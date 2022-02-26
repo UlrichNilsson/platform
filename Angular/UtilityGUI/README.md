@@ -41,6 +41,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 <http://192.168.1.163:30009/>
 
+<http://localhost:30009/>
+
 ### Investigate
 
 * `kubectl expose deployment utilitygui --type=LoadBalancer --name=my-service -n kube-verify`

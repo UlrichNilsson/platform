@@ -1,8 +1,0 @@
-{
-"SpaProxyServer": {
-"ServerUrl": "https://localhost:44474",
-"LaunchCommand": "npm start",
-"WorkingDirectory": "/Users/ulrichnilsson/ws/github/ulrichnilsson/platform/dotnet/UtilityGUI/src/UtilityGUI/ClientApp/",
-"MaxTimeoutInSeconds": "120"
-}
-}

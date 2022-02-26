@@ -1,6 +1,6 @@
 # ConFusion2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+## Create project and install dependencies
 
 `ng new conFusion2 --style=scss`
 
@@ -30,7 +30,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * `npm install --save @angular/forms@latest`
 * `npm install --save @angular/material@latest`
 
-ng update
+`ng update`
+
+## Docker
+
+`docker build -t ulrichnilsson/confusion .`
+`docker run -d -p 80:80 ulrichnilsson/confusion:latest`
+
+`sudo docker push ulrichnilsson/confusion:latest` build on arm and push to docker to run on raspberry K8s
+
+## Manual deploy K8s
+
+* `kubectl apply -f ./k8s/kustomize/base/deployment.yml`
+* `kubectl apply -f ./k8s/kustomize/base/nodeport.yml`
+
+<http://192.168.1.163:30010/>
 
 ## Clean up to build
 
@@ -41,6 +55,10 @@ ng update
 ## Local installation of angular cli
 
 `npm install --save-dev @angular/cli@latest`
+
+## Angular
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
 ## Development server
 
@@ -65,17 +83,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-## Docker
-
-`docker build -t ulrichnilsson/confusion .`
-`docker run -d -p 80:80 ulrichnilsson/confusion:latest`
-
-`sudo docker push ulrichnilsson/confusion:latest` build on arm and push to docker to run on raspberry K8s
-
-## Manual deploy K8s
-
-* `kubectl apply -f ./k8s/kustomize/base/deployment.yml`
-* `kubectl apply -f ./k8s/kustomize/base/nodeport.yml`
-
-<http://192.168.1.163:30010/>

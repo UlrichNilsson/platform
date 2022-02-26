@@ -1,15 +1,13 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: utilitygui
-  namespace: default
+  name: utilitygui-deployment
   labels:
     app: utilitygui
 spec:
   selector:
     matchLabels:
       app: utilitygui
-      namespace: default
   replicas: 3 # tells deployment to run 2 pods matching the template
   template:
     metadata:

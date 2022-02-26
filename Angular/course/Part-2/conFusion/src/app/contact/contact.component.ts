@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {NgForm} from '@angular/forms';
 
 import { Feedback, ContactType } from '../shared/feedback';
 @Component({
@@ -11,7 +12,9 @@ export class ContactComponent implements OnInit {
 
   feedbackForm: FormGroup;
   feedback: Feedback;
+  //feedbackFormDirective:string
   contactType = ContactType;
+  //@ViewChild('fform') feedbackFormDirective: NgForm;
 
 
   constructor(private fb: FormBuilder) {
@@ -59,6 +62,9 @@ export class ContactComponent implements OnInit {
       contacttype: 'None',
       meassage: ''
     });
+
+    //this.feedbackFormDirective.resetForm();
+
   }
 
 }

@@ -71,7 +71,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 `docker build -t ulrichnilsson/confusion .`
 `docker run -d -p 80:80 ulrichnilsson/confusion:latest`
 
+`sudo docker push ulrichnilsson/confusion:latest` build on arm and push to docker to run on raspberry K8s
+
 ## Manual deploy K8s
 
 * `kubectl apply -f ./k8s/kustomize/base/deployment.yml`
 * `kubectl apply -f ./k8s/kustomize/base/nodeport.yml`
+
+<http://192.168.1.163:30010/>

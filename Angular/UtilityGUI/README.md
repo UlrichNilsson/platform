@@ -32,6 +32,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 `docker run -d -p 80:80 ulrichnilsson/utilitygui:latest`
 
+`sudo docker push ulrichnilsson/utilitygui:latest` build on arm and push to docker to run on raspberry K8s
+
 ## Manual deploy K8s
 
 * `kubectl apply -f ./k8s/kustomize/base/deployment.yml`

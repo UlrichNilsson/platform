@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,16 @@ import { ContactComponent } from './contact/contact.component';
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},
       {path: 'contact', component: ContactComponent},
+      {path: '', redirectTo: '/home', pathMatch: 'full'},
+      {path: '**', component: PageNotFoundComponent}
     ]),
   ],
   providers: [],

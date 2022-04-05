@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
       {path: '', redirectTo: '/home', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent}
     ]),
+    NoopAnimationsModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

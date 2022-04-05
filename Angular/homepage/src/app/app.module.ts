@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import { RvDestinationsComponent } from './rv-destinations/rv-destinations.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,15 @@ import {MatCardModule} from '@angular/material/card';
     HeaderComponent,
     HomeComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RvDestinationsComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},
       {path: 'contact', component: ContactComponent},
+      {path: 'rv-destinations', component: RvDestinationsComponent},
       {path: '', redirectTo: '/home', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent}
     ]),

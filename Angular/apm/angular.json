@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "apm"
+  "cli": {
+    "analytics": "2ed61b92-e156-4606-8a50-6e5870d6971d"
+  }
 }

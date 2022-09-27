@@ -7,4 +7,7 @@
 
 ## gcloud commands
 
+<https://cloud.google.com/sdk/gcloud/>
+
 `gcloud projects list`
+`gcloud compute networks list`

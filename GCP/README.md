@@ -1,2 +1,3 @@
 # GCP
 
+`gcloud projects list`

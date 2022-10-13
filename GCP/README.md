@@ -9,5 +9,6 @@
 
 <https://cloud.google.com/sdk/gcloud/>
 
-`gcloud projects list`
-`gcloud compute networks list`
+* `gcloud projects list`
+* `gcloud compute networks list`
+* `gcloud compute networks subnets list`

@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material/card';
+import {MatLegacyCardModule as MatCardModule} from '@angular/material/legacy-card';
 import { RvDestinationsComponent } from './rv-destinations/rv-destinations.component';
 
 @NgModule({

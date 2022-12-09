@@ -20,6 +20,10 @@
 
 `sudo docker push ulrichnilsson/utilityapi`
 
+### Build
+
+`kustomize build -k ../k8s/kustomize/local`
+
 ### Deploy to k3s
 
 * `kubectl apply -f ../k8s/kustomize/base/deployment.yml`

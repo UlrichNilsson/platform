@@ -4,7 +4,9 @@
 
 `docker build -t ulrichnilsson/k3sutilityapi:latest .`
 
-`docker run -d -p 80:80 ulrichnilsson/utilitygui:latest`
+`docker run -d -p 80:80 ulrichnilsson/k3sutilityapi:latest`
+
+<http://localhost/weatherforecast>
 
 ## Push image to docker hub
 

@@ -7,15 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["UtilityAPI/UtilityAPI.csproj", "UtilityAPI/"]
-RUN chmod +x /src/UtilityAPI
-RUN dotnet restore "UtilityAPI/UtilityAPI.csproj"
+
+COPY ["src/UtilityAPI.csproj", "src/"]
+RUN chmod +x /src
+RUN dotnet restore "src/UtilityAPI.csproj"
 COPY . .
-WORKDIR "/src/UtilityAPI"
-RUN dotnet build "UtilityAPI.csproj" -c Release -o /app/build
+WORKDIR "/src"
+RUN dotnet build "src/UtilityAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "UtilityAPI.csproj" -c Release -o /app/publish
+RUN dotnet publish "src/UtilityAPI.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app

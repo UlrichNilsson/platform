@@ -22,7 +22,11 @@
 
 ### Build
 
-`kustomize build -k ../k8s/kustomize/local`
+`kustomize build ../k8s/kustomize/overlays/local`
+
+### Deploy to local docker desktop
+
+* `kubectl apply -k ../k8s/kustomize/overlays/local`
 
 ### Deploy to k3s
 

@@ -45,3 +45,10 @@ jobs:
 
       - name: List docker version
         run: docker --version
+
+      - name: Build docker ARM
+        run: docker build -f dotnet/UtilityAPI/src/arm.Dockerfile . -t ulrichnilsson/utilityapi
+
+      - name: Docker list images
+        run: docker image ls
+      

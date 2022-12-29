@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "UtilityGUI"
+  "cli": {
+    "analytics": "19cabac1-6ceb-4810-914e-f805fab69c8c"
+  }
 }

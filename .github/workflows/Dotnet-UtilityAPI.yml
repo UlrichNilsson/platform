@@ -35,13 +35,13 @@ jobs:
         run: dotnet --version
       
       - name: Dotnet restore
-        run: dotnet restore dotnet/UtilityAPI/UtilityAPI.sln
+        run: dotnet restore dotnet/UtilityAPI/src/UtilityAPI.csproj
       
       - name: Dotnet build
-        run: dotnet build dotnet/UtilityAPI/UtilityAPI.sln --no-restore
+        run: dotnet build dotnet/UtilityAPI/src/UtilityAPI.csproj --no-restore
 
       - name: Dotnet test
-        run: dotnet test dotnet/UtilityAPI/UtilityAPI.sln --no-restore
+        run: dotnet test dotnet/UtilityAPI/src/UtilityAPI.csproj --no-restore
 
       - name: List docker version
         run: docker --version

@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Dotnet-APITest-CI
+name: Dotnet-UtilityAPI-CI
 
 # Controls when the workflow will run
 on:
@@ -8,12 +8,12 @@ on:
   push:
     branches: [ master ]
     paths:
-      - ".github/workflows/Dotnet-APITest.yml"
+      - ".github/workflows/Dotnet-UtilityAPI.yml"
       - "dotnet5/**"
   pull_request:
     branches: [ master ]
     paths:
-      - ".github/workflows/Dotnet-APITest.yml"
+      - ".github/workflows/Dotnet-UtilityAPI.yml"
       - "dotnet5/**"
       
   # Allows you to run this workflow manually from the Actions tab
@@ -35,13 +35,13 @@ jobs:
         run: dotnet --version
       
       - name: Dotnet restore
-        run: dotnet restore dotnet/APITest/APITest.sln
+        run: dotnet restore dotnet/UtilityAPI/UtilityAPI.sln
       
       - name: Dotnet build
-        run: dotnet build dotnet/APITest/APITest.sln --no-restore
+        run: dotnet build dotnet/UtilityAPI/UtilityAPI.sln --no-restore
 
       - name: Dotnet test
-        run: dotnet test dotnet/APITest/APITest.sln --no-restore
+        run: dotnet test dotnet/UtilityAPI/UtilityAPI.sln --no-restore
 
       - name: List docker version
         run: docker --version

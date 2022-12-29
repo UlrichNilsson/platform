@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Dotnet-UtilityAPI-CI
+name: Dotnet-UtilityAPI-Docker-Image
 
 # Controls when the workflow will run
 on:
@@ -8,12 +8,12 @@ on:
   push:
     branches: [ master ]
     paths:
-      - ".github/workflows/Dotnet-UtilityAPI.yml"
+      - ".github/workflows/Dotnet-UtilityAPI-Docker-Image.yml"
       - "dotnet5/**"
   pull_request:
     branches: [ master ]
     paths:
-      - ".github/workflows/Dotnet-UtilityAPI.yml"
+      - ".github/workflows/Dotnet-UtilityAPI-Docker-Image.yml"
       - "dotnet5/**"
       
   # Allows you to run this workflow manually from the Actions tab
@@ -34,16 +34,9 @@ jobs:
       - name: Check dotnet version on runner
         run: dotnet --version
       
-      - name: Dotnet restore
-        run: dotnet restore dotnet/UtilityAPI/src/UtilityAPI.csproj
-      
-      - name: Dotnet build
-        run: dotnet build dotnet/UtilityAPI/src/UtilityAPI.csproj --no-restore
+      - name: Build docker ARM
+        run: docker build -f dotnet/UtilityAPI/Dockerfile . -t ulrichnilsson/utilityapi
 
-      - name: Dotnet test
-        run: dotnet test dotnet/UtilityAPI/src/UtilityAPI.csproj --no-restore
-
-      - name: List docker version
-        run: docker --version
-
+      - name: Docker list images
+        run: docker image ls
       

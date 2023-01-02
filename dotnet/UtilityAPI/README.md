@@ -38,6 +38,7 @@
 
 * `kubectl apply -f ../k8s/kustomize/base/deployment.yml`
 * `kubectl apply -f ../k8s/kustomize/base/nodeport.yml`
+* `kubectl apply -k ../k8s/kustomize/overlays/k3s`
 
 ## Validate
 

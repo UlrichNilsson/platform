@@ -63,8 +63,9 @@ jobs:
           push: true
           tags: |
             ulrichnilsson/utilityapi:latest
-          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
+          
+          
+          #tags: ${{ steps.meta.outputs.tags }}
 #file
           #docker push ulrichnilsson/utilitygui:latest

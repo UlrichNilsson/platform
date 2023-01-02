@@ -30,6 +30,10 @@
 
 * `kubectl apply -k ../k8s/kustomize/overlays/local`
 
+### Validate with
+
+* `http://localhost:30008/weatherforecast`
+
 ### Deploy to k3s
 
 * `kubectl apply -f ../k8s/kustomize/base/deployment.yml`

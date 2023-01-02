@@ -7,6 +7,6 @@ spec:
   selector:
     app: utilityapi
   ports:
-    - port: 5001
-      targetPort: 5001
+    - port: 80
+      targetPort: 80
       nodePort: 30008

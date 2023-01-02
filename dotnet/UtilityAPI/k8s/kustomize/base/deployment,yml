@@ -24,6 +24,6 @@ spec:
         image: ulrichnilsson/utilityapi:latest
         ports:
           - name: metrics
-            containerPort: 5000
+            containerPort: 5001
             protocol: TCP
       #imagePullPolicy: Always

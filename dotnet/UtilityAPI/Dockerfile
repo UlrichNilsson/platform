@@ -13,6 +13,8 @@ RUN dotnet publish "UtilityAPI.csproj" -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:7.0.0-alpine3.16-amd64 AS runtime
 
+RUN apk --no-cache add curl netcat-openbsd perl-utils
+
 WORKDIR /app
 COPY --from=build /app/publish .
 

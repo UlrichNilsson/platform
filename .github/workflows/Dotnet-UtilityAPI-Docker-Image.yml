@@ -38,7 +38,7 @@ jobs:
         run: dotnet --version
       
       - name: Build docker ARM
-        run: docker build -f dotnet/UtilityAPI/Dockerfile . -t ulrichnilsson/utilityapi
+        run: docker build ./dotnet/UtilityAPI -f ./dotnet/UtilityAPI/Dockerfile -t ulrichnilsson/utilityapi
 
       - name: Docker list images
         run: docker image ls

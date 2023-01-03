@@ -9,12 +9,12 @@ on:
     branches: [ master ]
     paths:
       - ".github/workflows/Dotnet-UtilityAPI-Docker-Image-arm.yml"
-      - "dotnet5/**"
+      - "dotnet/UtilityAPI/**"
   pull_request:
     branches: [ master ]
     paths:
       - ".github/workflows/Dotnet-UtilityAPI-Docker-Image-arm.yml"
-      - "dotnet5/**"
+      - "dotnet/UtilityAPI/**"
       
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

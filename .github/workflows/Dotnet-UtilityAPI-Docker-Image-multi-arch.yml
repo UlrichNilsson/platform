@@ -55,7 +55,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./dotnet/UtilityAPI/
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64/v8
           push: true
           tags: |
             ulrichnilsson/utilityapi:latest

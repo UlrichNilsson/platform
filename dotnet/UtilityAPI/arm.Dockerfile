@@ -5,7 +5,7 @@ COPY ./src/UtilityAPI.csproj ./UtilityAPI.csproj
 
 COPY ./src/Nuget.config ./Nuget.config
 
-RUN dotnet restore ./UtilityAPI.csproj --configfile ./Nuget.config -r linux-musl-arm64
+#RUN dotnet restore ./UtilityAPI.csproj --configfile ./Nuget.config -r linux-musl-arm64
 #--runtime linux-arm
 
 COPY ./src /app

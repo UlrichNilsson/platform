@@ -51,6 +51,7 @@ jobs:
         with:
           context: ./dotnet/UtilityAPI/
           platforms: linux/arm64
+          file: ./dotnet/UtilityAPI/arm.Dockerfile
           push: true
           tags: |
             ulrichnilsson/utilityapi:latest

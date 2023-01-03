@@ -5,12 +5,12 @@ COPY ./src/UtilityAPI.csproj ./UtilityAPI.csproj
 
 COPY ./src/Nuget.config ./Nuget.config
 
-#RUN dotnet restore ./UtilityAPI.csproj --configfile ./Nuget.config -r linux-musl-arm64
-#--runtime linux-arm
+RUN dotnet restore ./UtilityAPI.csproj --configfile ./Nuget.config -r linux-musl-arm64
+
 
 COPY ./src /app
 
-RUN dotnet publish "UtilityAPI.csproj" -c Release -o /app/publish --runtime linux-arm --self-contained
+RUN dotnet publish "UtilityAPI.csproj" -c Release -o /app/publish -r linux-musl-arm64 --self-contained false --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:7.0.1-alpine3.17-arm64v8 AS runtime
 

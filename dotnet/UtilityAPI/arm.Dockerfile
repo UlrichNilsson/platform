@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:7.0.100-alpine3.16-amd64 AS build
+FROM mcr.microsoft.com/dotnet/sdk:7.0.101-alpine3.17 AS build
 WORKDIR /app
 
 COPY ./src/UtilityAPI.csproj ./UtilityAPI.csproj
@@ -11,7 +11,7 @@ COPY ./src /app
 
 RUN dotnet publish "UtilityAPI.csproj" -c Release -o /app/publish
 
-FROM mcr.microsoft.com/dotnet/aspnet:7.0.0-alpine3.16-amd64 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:7.0.0-alpine3.17 AS runtime
 
 RUN apk --no-cache add curl netcat-openbsd perl-utils
 

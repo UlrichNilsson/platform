@@ -9,7 +9,7 @@ RUN dotnet restore ./UtilityAPI.csproj --configfile ./Nuget.config
 
 COPY ./src /app
 
-RUN dotnet publish "UtilityAPI.csproj" -c Release -o /app/publish -r linux-musl-arm64 --self-contained false --no-restore
+RUN dotnet publish "UtilityAPI.csproj" -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:7.0.0-alpine3.16-amd64 AS runtime
 

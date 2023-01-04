@@ -9,7 +9,7 @@ COPY ./src/Nuget.config ./Nuget.config
 
 COPY ./src /app
 
-RUN dotnet publish "UtilityAPI.csproj" -c Release -o /app/publish --runtime linux-arm --self-contained
+RUN dotnet publish "UtilityAPI.csproj" -c Release -o /app/publish --runtime linux-arm64 --self-contained
 
 FROM mcr.microsoft.com/dotnet/aspnet:7.0.1-alpine3.17 AS runtime
 

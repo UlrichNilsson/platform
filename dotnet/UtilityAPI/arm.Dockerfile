@@ -5,11 +5,11 @@ COPY ./src/UtilityAPI.csproj ./UtilityAPI.csproj
 
 COPY ./src/Nuget.config ./Nuget.config
 
-#RUN dotnet restore ./UtilityAPI.csproj --configfile ./Nuget.config -r linux-musl-arm64
+RUN dotnet restore ./UtilityAPI.csproj --configfile ./Nuget.config -p:RestoreUseSkipNonexistentTargets=false -nowarn:msb3202,nu1503
 
 COPY ./src /app
 
-RUN dotnet publish "UtilityAPI.csproj" -c Release -o /app/publish --runtime linux-arm64 --self-contained -v d
+RUN dotnet publish "UtilityAPI.csproj" -c Release -o /app/publish --runtime linux-arm64 --self-contained -p:RestoreUseSkipNonexistentTargets=false -nowarn:msb3202,nu1503
 
 FROM mcr.microsoft.com/dotnet/aspnet:7.0.1-alpine3.17 AS runtime
 

@@ -1,13 +1,25 @@
 # C++ code
 
-## Install in choco
-
-`choco install mingw`
+## Ubuntu
 
 ## Version
 
-`gcc --version`
+`g++ --version`
 
 ## Build
 
-`gcc hellopi.cpp -o outputfile.exe`
+`g++ ./HelloCpp.cpp -o outputfile`
+
+## Windows
+
+### Install in choco
+
+`choco install mingw`
+
+### Version
+
+`gcc --version`
+
+### Build
+
+`gcc ./HelloCpp.cpp -o outputfile`

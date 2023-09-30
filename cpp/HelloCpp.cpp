@@ -3,6 +3,6 @@
 using namespace std;
 int main()
 {
-	cout << "Hello Raspberry Pi!" << endl;
+	cout << "Hello c++" << endl;
 	return 0;
 }

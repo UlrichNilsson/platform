@@ -10,3 +10,7 @@ Angular/.DS_Store
 **/__init__.py
 
 **/.terraform*
+
+#Java
+
+**/.class

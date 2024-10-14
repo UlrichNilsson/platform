@@ -16,8 +16,22 @@
 
 `curl http://localhost:5000/api`
 
-## Image
+## Build image
 
 `docker build -t ulrichnilsson/pythonapi:latest .`
 
+## Run caontiner
+
 `docker run -d -p 5000:5000 ulrichnilsson/pythonapi:latest`
+
+## Run docker-compose
+
+`docker-compose up`
+
+## Backup DB
+
+`docker run --rm -v db-data:/db -v $(pwd):/backup busybox tar -zcvf /backup/db-backup.tar.gz /db`
+
+## Restore DB
+
+`docker run --rm -v db-data:/db -v $(pwd):/backup busybox tar -zxvf /backup/db-backup.tar.gz -C /`

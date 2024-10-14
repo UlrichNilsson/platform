@@ -16,4 +16,6 @@
 
 ## Image
 
-`docker build .`
+`docker build -t ulrichnilsson/pythonapi:latest .`
+
+`docker run -d -p 5000:5000 ulrichnilsson/pythonapi:latest`

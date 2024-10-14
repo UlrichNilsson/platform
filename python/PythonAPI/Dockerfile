@@ -17,4 +17,4 @@ EXPOSE 5000
 ENV FLASK_ENV=development
 
 # Run app.py when the container launches
-CMD ["python", "app.py"]
+CMD ["python3", "PythonAPI.py"]
